@@ -1,0 +1,12 @@
+feature,value
+my_folder,ELTeC-fra/corpus
+my_language,French
+n_authors,2 4 8 16
+text_dimensions,200 400 600 800 1000 1200 1400 1600 1800 2000 2500 3000 3500 4000 4500 5000
+random_selection,F
+MFW_series,200 400 600 800 1000 1200 1400 1600 1800 2000
+n_grams,T
+ngram_size,3 4 5
+distances,dist.manhattan dist.euclidean dist.delta dist.eder dist.canberra dist.wurzburg dist.argamon dist.cosine dist.entropy dist.minmaxfast dist.simple
+n_repetitions,20
+n_cores,7
