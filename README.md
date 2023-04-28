@@ -4,18 +4,14 @@ Scripts and corpora for the paper: "Short texts with fewer authors. Revisiting t
 
 ## Structure
 
-Analysis setup is defined by the *analysis_features.csv* file.  
-Analysis is performed by the *bash_text_length_parallel.sh* script, which calls the three R scripts and allows for parallelization of the process (up to 7 cores).  
-The *results_overview.csv* file contains an overview of the results obtained so far.  
-The folders *100_english_novels, 68_german_novels, ELTeC-fra, and ELTeC-ita* contain the working corpora:  
-- Ciotti, F., Schöch, C. and Burnard, L. (2022). ELTeC-ita European Literary Text Collection (ELTeC) https://github.com/COST-ELTeC/ELTeC-ita (accessed 31 October 2022).
-- Computational Stylistics Group (2022a). 100 English Novels ver. 1.4 https://github.com/computationalstylistics/100_english_novels (accessed 31 October 2022).
-- Computational Stylistics Group (2022b). 68 German Novels https://github.com/computationalstylistics/68_german_novels (accessed 31 October 2022).
-- Schöch, C. and Burnard, L. (2021). French Novel Corpus (ELTeC-fra): April 2021 release Zenodo doi:10.5281/ZENODO.4662433. https://zenodo.org/record/4662433 (accessed 31 October 2022).
+### Scripts
 
-The folder *Results* is prepared to contain results of the analysis.
+Analysis is performed by the **bash_text_length_parallel.sh** script, which calls the three R scripts and allows for parallelization of the process (up to 7 cores).  
+- **01_evaluate_parallel_processing.R** reads analysis features from the *analysis_features.csv* file and prepares instructions for parallel processing
+- **02_text_length_analysis** performs the analysis in parallel
+- **03_conflate_results.R** conflates the results and saves them to a single file
 
-### Features
+### Analysis Features
 
 Analysis features are defined in the *analysis_features.csv* file. You can modify them to run different analyses:
 - **my_folder** defines the folder containing the corpus to be processed (corpus files should have extension .txt, file naming should follow the Stylo convention: see available corpora for example)
@@ -30,11 +26,18 @@ Analysis features are defined in the *analysis_features.csv* file. You can modif
 - **n_repetitions** defines the number of repetitions for each configuration
 - **n_cores** defines the number of cores for parallel processing (the script currently supports from two to six cores)
 
-### Scripts
+### Available Corpora
 
-- **01_evaluate_parallel_processing.R** reads analysis features from the *analysis_features.csv* file and prepares instructions for parallel processing
-- **02_text_length_analysis** performs the analysis in parallel
-- **03_conflate_results.R** conflates the results and saves them to single file
+The folders *100_english_novels, 68_german_novels, ELTeC-fra, and ELTeC-ita* contain the working corpora:  
+- Ciotti, F., Schöch, C. and Burnard, L. (2022). ELTeC-ita European Literary Text Collection (ELTeC) https://github.com/COST-ELTeC/ELTeC-ita (accessed 31 October 2022).
+- Computational Stylistics Group (2022a). 100 English Novels ver. 1.4 https://github.com/computationalstylistics/100_english_novels (accessed 31 October 2022).
+- Computational Stylistics Group (2022b). 68 German Novels https://github.com/computationalstylistics/68_german_novels (accessed 31 October 2022).
+- Schöch, C. and Burnard, L. (2021). French Novel Corpus (ELTeC-fra): April 2021 release Zenodo doi:10.5281/ZENODO.4662433. https://zenodo.org/record/4662433 (accessed 31 October 2022).
+
+### Results
+
+The *results_overview.csv* file contains an overview of the results obtained so far.  
+The folder *Results* is prepared to contain further results.
 
 ## Instructions
 
