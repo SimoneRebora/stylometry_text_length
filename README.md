@@ -1,6 +1,6 @@
 # stylometry_text_length
 
-Scripts and corpora for the paper: "Short texts with fewer authors. Revisiting the boundaries of stylometry" (presented at DH2023)
+Scripts and corpora for the paper: "Short texts with fewer authors. Revisiting the boundaries of stylometry", presented at [DH2023](https://dh2023.adho.org/) ([Paper](https://zenodo.org/record/7961822) | [Slides](https://docs.google.com/presentation/d/1M7L5h-5-DYO1aiJEa6gt_SKBvN3KWpeml4jiGFZFijE/edit?usp=sharing))
 
 ## Structure
 
